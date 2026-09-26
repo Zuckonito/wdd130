@@ -12,7 +12,6 @@
 
 body {
     font-family: var(--whole-font);
-    color: var(--primary-color);
 }
 header, main, footer {
     width: 840px;
@@ -24,6 +23,14 @@ h1, h2 {
 }
 
 nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 16px;
     padding: 8px;
 }
@@ -53,10 +60,39 @@ footer nav img{
     height: auto;
 }
 
+section {
+    margin: 16px;
+    padding: 50px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+section img {
+    float: right;
+    width: 125px;
+    height: auto;
+}
+
+.history {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero article {
     position: absolute;
     width: 80%;
-    top: 250px;
+    top: 200px;
+    margin-left: 90px;
     opacity: 0.9;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -77,4 +113,60 @@ h1 {
 h2 {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: 3px solid var(--secondary-color);
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+    gap: 0;
+}
+
+header nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+}
+
+/* Grid and Flex Layout */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    margin-bottom: 1rem;
+    justify-content: space-around;
+}
+
+header nav {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer{
+    padding: 0;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Adventure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.adventureGallery {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
