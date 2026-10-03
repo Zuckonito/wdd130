@@ -1,0 +1,16 @@
++------------------------------------+          +------------------------------------+
+|               Video                |          |              Comment               |
++------------------------------------+          +------------------------------------+
+| - _title : string                  | 1      * | - _commenterName : string          |
+| - _author : string                 |----------| - _text : string                   |
+| - _length : int                    |  contiene +------------------------------------+
+| - _comments : List<Comment>        |          | + Comment(name: string, text: str) |
++------------------------------------+          | + GetCommenterName() : string      |
+| + Video(title, author, length)     |          | + GetText() : string               |
+| + AddComment(comment: Comment)     |          +------------------------------------+
+| + GetCommentCount() : int          |
+| + GetTitle() : string              |
+| + GetAuthor() : string             |
+| + GetLength() : int                |
+| + GetComments() : List<Comment>    |
++------------------------------------+

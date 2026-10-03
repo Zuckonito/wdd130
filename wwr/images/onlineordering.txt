@@ -1,0 +1,41 @@
++----------------------------------------+
+|                 Order                  |
++----------------------------------------+
+| - _customer : Customer                 |
+| - _products : List<Product>            |
++----------------------------------------+
+| + Order(customer: Customer)            |
+| + AddProduct(product: Product)         |
+| + CalculateTotalCost() : decimal       |
+| + GetPackingLabel() : string           |
+| + GetShippingLabel() : string          |
++----------------------------------------+
+                   |
+                   | 
+                   v
++----------------------------------------+          +----------------------------------------+
+|                Customer                |          |                Product                 |
++----------------------------------------+          +----------------------------------------+
+| - _name : string                       |          | - _name : string                       |
+| - _address : Address                   |          | - _productId : string                  |
++----------------------------------------+          | - _price : decimal                     |
+| + Customer(name: string, addr: Address)|          | - _quantity : int                      |
+| + LivesInUSA() : bool                  |          +----------------------------------------+
+| + GetName() : string                   |          | + Product(name, id, price, qty)        |
+| + GetAddress() : Address               |          | + GetTotalCost() : decimal             |
++----------------------------------------+          | + GetName() : string                   |
+                   |                                | + GetProductId() : string              |
+                   | 		                    +----------------------------------------+
+                   v
++----------------------------------------+
+|                Address                 |
++----------------------------------------+
+| - _streetAddress : string              |
+| - _city : string                       |
+| - _stateProvince : string              |
+| - _country : string                    |
++----------------------------------------+
+| + Address(street, city, state, country)|
+| + IsInUSA() : bool                     |
+| + GetFormattedAddress() : string       |
++----------------------------------------+
