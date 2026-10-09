@@ -1,6 +1,6 @@
 :root {
     --primary-color: #0165E1;
-    --secondary-color: #eee;
+    --secondary-color: #ffffff;
     --whole-font: 'Titillium Web', sans-serif;
 }
 
@@ -212,4 +212,371 @@ footer{
 
 .contact-form button[type="submit"]:hover {
     background-color: #002244;
+}
+
+/* Home Page Styles (index.html)       */
+
+
+/* Call to Action Section */
+.cta-container {
+    text-align: center;
+    align-items: center;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+/* Newsletter Section & Form */
+.newsletter-section {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.newsletter-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 4px;
+}
+
+.form-item label {
+    font-weight: bold;
+}
+
+.form-item input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--whole-font);
+}
+
+.submit-btn {
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: var(--whole-font);
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+/* Grid Layout for Offerings */
+.grid-content {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.grid-content h2 {
+    padding: 8px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.grid-card {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-card img {
+    float: none;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+
+/* Trips Page Styles (trips.html)      */
+
+
+.page-title {
+    position: static;
+    text-align: center;
+    margin: 16px 0;
+}
+
+/* Call to Action Section */
+.cta-contact {
+    text-align: center;
+    align-items: center;
+}
+
+/* Trips Grid (No single-column flow) */
+.trips-grid-section {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.trips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.trip-card {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-card img {
+    float: none;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-info {
+    padding: 16px;
+}
+
+.trip-info h3 {
+    margin-bottom: 8px;
+}
+
+.trip-info p {
+    margin: 4px 0;
+    padding: 0;
+}
+
+/* Table Styles */
+.table-section {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 16px;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.trips-table th, 
+.trips-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+}
+
+.trips-table th {
+    background-color: #003366;
+    font-weight: bold;
+}
+
+/* =================================== */
+/* Contact Page Specific Fixes         */
+/* =================================== */
+
+/* Reset de H1 para Contacto (para evitar la posición absoluta) */
+.contact-main .company-header h1 {
+    position: static;
+    background-color: transparent;
+    color: #111111; /* Contraste AA garantizado sobre fondo claro */
+    text-shadow: none;
+    font-size: 2rem;
+    padding: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.company-header {
+    background-color: transparent;
+    color: #333333; /* Texto oscuro sobre fondo claro */
+    text-align: center;
+    padding: 16px;
+    margin: 0;
+}
+
+.company-header p {
+    margin: 4px 0;
+    padding: 0;
+}
+
+/* Grid de 2 Columnas (Mapa a la Izquierda, Formulario a la Derecha) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 16px 0;
+    align-items: start;
+}
+
+.contact-grid .map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    border: 1px solid #ccc;
+}
+
+/* Formulario alineado según Wireframe */
+.contact-form {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.form-row label {
+    width: 120px;
+    font-weight: bold;
+    color: #111111; /* Solución al contraste AA */
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #767676; /* Borde con alto contraste */
+    border-radius: 4px;
+    font-family: var(--whole-font);
+    color: #111111;
+}
+
+/* Radio buttons alineados */
+.radio-group {
+    align-items: flex-start;
+}
+
+.radios {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.radios label {
+    width: auto;
+    font-weight: normal;
+}
+
+/* Checkbox Row */
+.checkbox-row label {
+    width: auto;
+    font-weight: normal;
+}
+
+/* Botón de envío (Ajuste de contraste AA) */
+.contact-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #e0e0e0;
+    color: #111111; /* Texto oscuro sobre gris claro cumple estándar AA */
+    border: 1px solid #767676;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: #cccccc;
+}
+
+/* Sección de Empleados (Abajo) */
+.employee-profiles {
+    background-color: #f4f4f4; /* Fondo claro según wireframe */
+    color: #111111;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 24px;
+}
+
+.employee-profiles h2 {
+    background-color: transparent;
+    color: #111111;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    text-align: center;
+}
+
+.employee-grid figure {
+    margin: 0;
+}
+
+.employee-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.employee-grid figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #111111;
 }

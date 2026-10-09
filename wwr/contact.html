@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sebastian Medina">
-    <meta name="description" content="Splash White Water Rafting is a premier rafting company offering thrilling adventures on the river. Join us for an unforgettable experience!">
+    <meta name="description" content="Get in touch with Splash White Water Rafting. Contact us for inquiries, booking questions, or site feedback.">
     <title>Contact Us - Splash White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -12,88 +12,85 @@
     <header>
         <img src="images/z-splash.png" alt="Sebastian Medina">
         <nav>
-            <!-- Not to confuse index.html with the WDD130 index, this is an index for WWR -->
             <a href="index.html" class="nav-link">Home</a> 
             <a href="about.html" class="nav-link">About Us</a>
             <a href="trips.html" class="nav-link">Trips</a>
             <a href="contact.html" class="nav-link">Contact Us</a>
         </nav>
     </header>
-   <main>
-        <h1>Contact Us</h1>
 
-        <!-- Sección de Información de la Empresa -->
-        <section class="company-info">
-            <h2>Company Information</h2>
-            <div class="info-details">
-                <p><strong>Address:</strong> 123 Rafting River Way, Adventure City, AC 84000</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
-                <p><strong>Email:</strong> contact@splashrafting.com</p>
-            </div>
+    <main class="contact-main">
+        <!-- 1. Empresa Header Centrado según wireframe -->
+        <section class="company-header">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Rafting River Way, Adventure City, AC 84000</p>
+            <p>+1 555 123 4567</p>
+            <p>info@splashrafting.com</p>
+        </section>
+
+        <!-- 2. Sección de 2 Columnas: Mapa (Izquierda) + Formulario (Derecha) -->
+        <div class="contact-grid">
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95372981531659!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4ce6d05767%3A0x5045675218ce8e0!2sMelbourne%20VIC%2C%20Australia!52e0!3m2!1sen!2s!4v1614123456789!5m2!1sen!2s" 
-                    width="400" 
-                    height="300" 
                     allowfullscreen="" 
                     loading="lazy">
                 </iframe>
             </div>
-        </section>
 
-        <!-- Perfiles de Empleados -->
+            <form action="#" method="post" class="contact-form">
+                <div class="form-row">
+                    <label for="fullname">Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Placeholder" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="useremail">Email</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="Placeholder" required>
+                </div>
+
+                <div class="form-row radio-group">
+                    <label class="radio-title">Message Purpose</label>
+                    <div class="radios">
+                        <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type here" required></textarea>
+                </div>
+
+                <div class="form-row checkbox-row">
+                    <label><input type="checkbox" name="subscribe" value="yes"> Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit" class="contact-btn">Get in Touch!</button>
+            </form>
+        </div>
+
+        <!-- 3. Empleados abajo según wireframe -->
         <section class="employee-profiles">
-            <h2>Meet Our Team</h2>
+            <h2>We Are Here to Serve You</h2>
             <div class="employee-grid">
                 <figure>
                     <img src="images/rafting59_600.jpg" alt="Jane Doe - Lead Guide">
-                    <figcaption>Jane Doe - Lead Guide</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
                 <figure>
                     <img src="images/rafting59_600.jpg" alt="John Smith - Operations Manager">
-                    <figcaption>John Smith - Operations Manager</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
                 <figure>
                     <img src="images/rafting59_600.jpg" alt="Emily Davis - Safety Officer">
-                    <figcaption>Emily Davis - Safety Officer</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
             </div>
         </section>
-
-        <!-- Formulario de Contacto -->
-        <section class="contact-form-section">
-            <h2>Send Us a Message</h2>
-            <form action="#" method="post" class="contact-form">
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
-
-                <label for="useremail">Email Address:</label>
-                <input type="email" id="useremail" name="useremail" required>
-
-                <fieldset>
-                    <legend>Purpose of Message</legend>
-                    <label>
-                        <input type="radio" name="purpose" value="general" checked> General Inquiry
-                    </label>
-                    <label>
-                        <input type="radio" name="purpose" value="reservation"> Reservation Question
-                    </label>
-                    <label>
-                        <input type="radio" name="purpose" value="suggestion"> Website Suggestion
-                    </label>
-                </fieldset>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes"> Please subscribe me to the monthly newsletter
-                </label>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
     </main>
+
     <footer>
         <p>&copy; 2026 Sebastian Medina, Venezuela - Chile</p>
         <nav class="socialmedia">
